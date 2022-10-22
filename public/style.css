@@ -8,5 +8,24 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  background: cornSilk;
+  background: rgb(194, 193, 192);
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(228, 153, 228);
+  height: 100px;
+  color: rgb(185, 210, 121);
+  font-size: 80px;
+  filter: drop-shadow(10px 10px 4px #6c6c6c);
+  text-shadow: 2px 2px #5b5858;
+  font-family:'Franklin Gothic Medium';
+
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+ 
 }
