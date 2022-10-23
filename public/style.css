@@ -29,3 +29,15 @@ body {
   justify-content: center;
  
 }
+
+
+.headline{
+  color: rgb(228, 153, 228);
+  font-size: 40px;
+  filter: drop-shadow(4px 4px 4px #6c6c6c);
+  text-shadow: 2px 2px #5b5858;
+  font-family:'Franklin Gothic Medium';
+
+
+
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-// import axios from 'axios'
+import axios from 'axios'
 import { Link } from 'react-router-dom';
 import AllPlayers from './AllPlayers'
 import Test from './Test.jsx'
@@ -9,20 +9,20 @@ import SinglePlayer from './SinglePlayer';
 
 const App = () => {
   const [players, setPlayers] = useState([])
+  const [player, setPlayer] = useState([])
 
-  //  const getPlayers = async () => {
-  //   const response = await axios.get('http://localhost:8080/api/players'),
-  //   setPlayers(response.data.data)
-  //  }
+  const getPlayers = async () => {
+    const response = await axios.get('http://localhost:8080/api/players')
+    setPlayers(response.data)
+  }
+   
+  const getPlayer = async (id) => {
+    const response = await axios.get(`http://localhost:8080/api/players/${id}`)
+    setPlayer(response.data)
+    console.log("this is your player", player)
+  }
       
-const getPlayers = async () => {
-  const response = await fetch (
-    'http://localhost:8080/api/players'
-  )
-    const json = await response.json()
-  
-    setPlayers(json)
-}
+
 
 useEffect( () => {
   console.log("First useEffect Kicked off");
@@ -47,9 +47,8 @@ useEffect( () => {
         </div>
       </div>
       <Routes>
-        {/* <Route exact path="/leaderboard" element={<AllPlayers />} /> */}
-        
-  
+        <Route exact path="/leaderboard" element={<AllPlayers players={players}/>} />
+        <Route exact path="/leaderboard/:id" element={<SinglePlayer  />} />
         <Route exact path="/test" element={<Test />} />
         <Route path="/" element={<p></p>}/>
         <Route path="/*" element={<p></p>}/>

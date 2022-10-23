@@ -1,22 +1,24 @@
 import React from 'react';
+import AllPlayers from './AllPlayers';
 
 
+const SinglePlayer = ({player}) => {
 
-const SinglePlayer = (props) => {
+
+  
 
   return (
-    console.log(props.players.username)
+  
+    <div>
+      {player.username}
+   
+      
+     
+    </div>
+
+
+
   )
- 
-}
-
-  //   <div className='player'>
-  //   <p>single player</p>
-  //     {props.players.username}
-
-  // </div>
-
+  }
 
 export default SinglePlayer;
-
-
