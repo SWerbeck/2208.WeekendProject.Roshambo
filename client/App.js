@@ -9,19 +9,14 @@ import SinglePlayer from './SinglePlayer';
 
 const App = () => {
   const [players, setPlayers] = useState([])
-  const [player, setPlayer] = useState([])
+  
 
   const getPlayers = async () => {
     const response = await axios.get('http://localhost:8080/api/players')
     setPlayers(response.data)
   }
    
-  const getPlayer = async (id) => {
-    const response = await axios.get(`http://localhost:8080/api/players/${id}`)
-    setPlayer(response.data)
-    console.log("this is your player", player)
-  }
-      
+
 
 
 useEffect( () => {
@@ -47,11 +42,11 @@ useEffect( () => {
         </div>
       </div>
       <Routes>
-        <Route exact path="/leaderboard" element={<AllPlayers players={players}/>} />
+        <Route exact path="/leaderboard" element={<AllPlayers players={players} />}/>
         <Route exact path="/leaderboard/:id" element={<SinglePlayer  />} />
         <Route exact path="/test" element={<Test />} />
         <Route path="/" element={<p></p>}/>
-        <Route path="/*" element={<p></p>}/>
+        <Route path="/*" element={<p></p>}/> 
       </Routes>
     </div>
   );

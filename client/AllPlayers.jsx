@@ -13,9 +13,7 @@ return  (
 
  {players.map((player) => {
   return <Link to={`/leaderboard/${player.id}`} key={player.id}> 
-    <button onClick={() =>{
-      getPlayer(player.id)}
-    }> 
+    <button > 
      <p>{player.username}</p>
     </button> 
   </Link>
