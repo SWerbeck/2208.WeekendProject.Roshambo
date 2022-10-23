@@ -43,14 +43,13 @@ useEffect( () => {
           <Link to="/"><button>Home</button></Link>
           <Link to="/leaderboard"><button>Leaderboard</button></Link>
           <Link to="/play"><button>Play</button></Link>
-          <Link to="/singleplayer"><button>Single player</button></Link>
           <Link to="/test"><button>TEST</button></Link>
         </div>
       </div>
       <Routes>
         {/* <Route exact path="/leaderboard" element={<AllPlayers />} /> */}
         
-        <Route exact path="/singleplayer" element={<SinglePlayer />} />
+  
         <Route exact path="/test" element={<Test />} />
         <Route path="/" element={<p></p>}/>
         <Route path="/*" element={<p></p>}/>
