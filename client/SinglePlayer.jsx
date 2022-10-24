@@ -28,16 +28,16 @@ if (!doneLoading) return  <p>loading</p>
 
 else
   return (
-  
+  <div className="playersContainer">
     <div>
-      <p>{player.username}</p>
+      <p className="headline">{player.username[0].toUpperCase() + player.username.slice(1,player.username.length)}:</p>
       {player.games.map(game => (
-        <li key={game.id}>
-            Played Game {game.id} with a result of {game.result}
+        <li key={game.id} className="results">
+            Game: {game.id} Result: {game.result}
         </li> 
       ))}
    
-     
+     </div>
     </div>
 
 

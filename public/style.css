@@ -30,6 +30,10 @@ body {
  
 }
 
+button{
+  margin: 5px
+}
+
 
 .headline{
   color: rgb(228, 153, 228);
@@ -39,5 +43,34 @@ body {
   font-family:'Franklin Gothic Medium';
 
 
+
+}
+
+.playersContainer{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#players{
+  text-align: center;
+}
+
+.player{
+  color: rgb(72, 185, 230);
+  font-size: 30px;
+  filter: drop-shadow(4px 4px 4px #6c6c6c);
+  text-shadow: 2px 2px #5b5858;
+  font-family:'Franklin Gothic Medium';
+
+
+}
+
+.results{
+  color: rgb(63, 146, 179);
+  font-size: 20px;
+  filter: drop-shadow(2px 2px 2px #868282);
+  text-shadow: 1px 1px #787c99;
+  font-family:'Franklin Gothic Medium';
 
 }
